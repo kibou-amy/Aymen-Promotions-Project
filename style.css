@@ -1,363 +1,392 @@
 /* ==========================================================================
-   COLOR PALETTE & VARIABLES (Custom Non-Gold Luxury Scheme)
+   BICQNÉ FONT DECLARATION (Local Font Import)
    ========================================================================== */
-   :root {
-    --bg-obsidian: #0d1114;
-    --bg-card: rgba(22, 28, 34, 0.65);
-    --border-glass: rgba(255, 255, 255, 0.08);
-    
-    --text-white: #f9f8f6;
-    --text-muted: #a0aab2;
-    
-    --teal-emerald: #006b54;
-    --teal-glow: rgba(0, 107, 84, 0.4);
-    --crimson-red: #c8102e;
-    
-    font-family:'Cormorant Garamond',serif;
-    font-style:italic;font-weight:600;
-  }
+@font-face {
+  font-family: 'Bicqne';
+  src: url('fonts/Bicqne-Regular.woff2') format('woff2'),
+       url('fonts/Bicqne-Regular.woff') format('woff'),
+       url('fonts/Bicqne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bicqne';
+  src: url('fonts/Bicqne-Bold.woff2') format('woff2'),
+       url('fonts/Bicqne-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   COLOR PALETTE & VARIABLES
+   ========================================================================== */
+:root {
+  --bg-obsidian: #0d1114;
+  --bg-card: rgba(22, 28, 34, 0.65);
+  --border-glass: rgba(255, 255, 255, 0.08);
   
-  /* ==========================================================================
-     BASE & RESET STYLES
-     ========================================================================== */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  --text-white: #f9f8f6;
+  --text-muted: #a0aab2;
   
-  body {
-    background-color: var(--bg-obsidian);
-    color: var(--text-white);
-    font-family: var(--font-body);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
+  --teal-emerald: #006b54;
+  --teal-glow: rgba(0, 107, 84, 0.4);
+  --crimson-red: #c8102e;
   
-  a {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-  }
-  
-  /* ==========================================================================
-     NAVIGATION BAR
-     ========================================================================== */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 8%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-  }
-  
-  .logo img{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 200px;
-  }
-  
-  .logo-symbol {
-    width: 32px;
-    height: 32px;
-    border: 2px solid var(--teal-emerald);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--crimson-red);
-    font-weight: 700;
-  }
-  
-  .logo-text span {
-    color: var(--text-muted);
-    font-weight: 300;
-    font-size: 0.85rem;
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 35px;
-  }
-  
-  .nav-links a {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    font-weight: 400;
-  }
-  
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: var(--text-white);
-  }
-  
-  /* ==========================================================================
-     HERO SECTION
-     ========================================================================== */
-  .hero {
-    position: relative;
-    height: 85vh;
-    min-height: 600px;
-    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding: 0 8%;
-  }
-  
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg, 
-      rgba(13, 17, 20, 0.95) 0%, 
-      rgba(13, 17, 20, 0.7) 45%, 
-      rgba(13, 17, 20, 0.2) 100%
-    );
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 650px;
-    margin-top: 40px;
+  /* Primary Heading Font set to Bicqne with Cinzel fallback */
+  --font-bicqne: 'Bicqne', 'Cinzel', Didot, serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ==========================================================================
+   BASE & RESET STYLES
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: var(--text-white);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR
+   ========================================================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 8%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+}
+
+.logo-symbol {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--teal-emerald);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--crimson-red);
+  font-weight: 700;
+}
+
+.logo-text span {
+  color: var(--text-muted);
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text-white);
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero {
+  position: relative;
+  height: 85vh;
+  min-height: 600px;
+  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    rgba(13, 17, 20, 0.95) 0%, 
+    rgba(13, 17, 20, 0.7) 45%, 
+    rgba(13, 17, 20, 0.2) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  margin-top: 40px;
+}
+
+.hero-title {
+  font-family: var(--font-bicqne);
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.accent-text {
+  color: var(--teal-emerald);
+  font-weight: 700;
+  position: relative;
+}
+
+.accent-text::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40%;
+  height: 2px;
+  background-color: var(--crimson-red);
+}
+
+.hero-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 35px;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 14px 32px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--teal-emerald);
+  color: var(--text-white);
+  border: 1px solid var(--teal-emerald);
+}
+
+.btn-primary:hover {
+  background-color: #005240;
+  box-shadow: 0 0 15px var(--teal-glow);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: var(--text-white);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  border-color: var(--text-white);
+}
+
+.btn-gold-alternative {
+  background-color: var(--teal-emerald);
+  color: var(--text-white);
+  border: 1px solid var(--teal-emerald);
+  padding: 16px 40px;
+  letter-spacing: 2px;
+  font-family: var(--font-body);
+}
+
+.btn-gold-alternative:hover {
+  border-color: var(--crimson-red);
+  box-shadow: 0 0 20px rgba(200, 16, 46, 0.3);
+}
+
+/* ==========================================================================
+   FEATURES SECTION (Glass Cards)
+   ========================================================================== */
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0 8%;
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  padding: 35px 30px;
+  border-radius: 6px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 107, 84, 0.5);
+}
+
+.card-icon {
+  color: var(--teal-emerald);
+  margin-bottom: 20px;
+}
+
+.glass-card h3 {
+  font-family: var(--font-bicqne);
+  font-size: 1.45rem;
+  margin-bottom: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.glass-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+.card-link {
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.card-link:hover {
+  color: var(--crimson-red);
+}
+
+/* ==========================================================================
+   PROJECTS SECTION
+   ========================================================================== */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 80px 8% 40px 8%;
+}
+
+.project-card {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-glass);
+}
+
+.project-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.03);
+}
+
+.project-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(0deg, rgba(13, 17, 20, 0.95) 0%, rgba(13, 17, 20, 0) 100%);
+}
+
+.project-details h3 {
+  font-family: var(--font-bicqne);
+  font-size: 1.55rem;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.project-details p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   PORTFOLIO CTA & FOOTER HEADER
+   ========================================================================== */
+.portfolio-cta {
+  text-align: center;
+  padding: 20px 0 80px 0;
+}
+
+.services-header {
+  text-align: center;
+  padding: 60px 0;
+  border-top: 1px solid var(--border-glass);
+}
+
+.services-header h2 {
+  font-family: var(--font-bicqne);
+  font-size: 2.5rem;
+  letter-spacing: 8px;
+  color: var(--text-white);
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 992px) {
+  .features-container,
+  .projects-container {
+    grid-template-columns: 1fr;
   }
   
   .hero-title {
-    font-family: var(--font-heading);
-    font-size: 3.8rem;
-    font-weight: 400;
-    line-height: 1.15;
-    margin-bottom: 20px;
+    font-size: 2.7rem;
   }
   
-  .accent-text {
-    color: var(--teal-emerald);
-    font-weight: 600;
-    position: relative;
-  }
-  
-  /* Subtle Crimson line accent under heading */
-  .accent-text::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 40%;
-    height: 2px;
-    background-color: var(--crimson-red);
-  }
-  
-  .hero-subtitle {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    font-weight: 300;
-    margin-bottom: 35px;
-  }
-  
-  /* Buttons */
-  .hero-buttons {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .btn {
-    padding: 14px 32px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    cursor: pointer;
-    display: inline-block;
-  }
-  
-  .btn-primary {
-    background-color: var(--teal-emerald);
-    color: var(--text-white);
-    border: 1px solid var(--teal-emerald);
-  }
-  
-  .btn-primary:hover {
-    background-color: #005240;
-    box-shadow: 0 0 15px var(--teal-glow);
-  }
-  
-  .btn-secondary {
-    background-color: rgba(255, 255, 255, 0.03);
-    color: var(--text-white);
-    border: 1px solid var(--border-glass);
-    backdrop-filter: blur(10px);
-  }
-  
-  .btn-secondary:hover {
-    border-color: var(--text-white);
-  }
-  
-  .btn-gold-alternative {
-    background-color: var(--teal-emerald);
-    color: var(--text-white);
-    border: 1px solid var(--teal-emerald);
-    padding: 16px 40px;
-    letter-spacing: 2px;
-  }
-  
-  .btn-gold-alternative:hover {
-    border-color: var(--crimson-red);
-    box-shadow: 0 0 20px rgba(200, 16, 46, 0.3);
-  }
-  
-  /* ==========================================================================
-     FEATURES SECTION (Glass Cards)
-     ========================================================================== */
   .features-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 0 8%;
-    margin-top: -80px;
-    position: relative;
-    z-index: 10;
+    margin-top: 40px;
   }
-  
-  .glass-card {
-    background: var(--bg-card);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--border-glass);
-    padding: 35px 30px;
-    border-radius: 6px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-  }
-  
-  .glass-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(0, 107, 84, 0.5);
-  }
-  
-  .card-icon {
-    color: var(--teal-emerald);
-    margin-bottom: 20px;
-  }
-  
-  .glass-card h3 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    margin-bottom: 12px;
-    font-weight: 600;
-  }
-  
-  .glass-card p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 25px;
-    font-weight: 300;
-  }
-  
-  .card-link {
-    font-size: 0.75rem;
-    letter-spacing: 1.5px;
-    color: var(--text-muted);
-    font-weight: 600;
-  }
-  
-  .card-link:hover {
-    color: var(--crimson-red);
-  }
-  
-  /* ==========================================================================
-     PROJECTS SECTION
-     ========================================================================== */
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 80px 8% 40px 8%;
-  }
-  
-  .project-card {
-    position: relative;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 1px solid var(--border-glass);
-  }
-  
-  .project-card img {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-  }
-  
-  .project-card:hover img {
-    transform: scale(1.03);
-  }
-  
-  .project-details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
-    background: linear-gradient(0deg, rgba(13, 17, 20, 0.95) 0%, rgba(13, 17, 20, 0) 100%);
-  }
-  
-  .project-details h3 {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-  }
-  
-  .project-details p {
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    margin-bottom: 15px;
-  }
-  
-  /* ==========================================================================
-     PORTFOLIO CTA & FOOTER HEADER
-     ========================================================================== */
-  .portfolio-cta {
-    text-align: center;
-    padding: 20px 0 80px 0;
-  }
-  
-  .services-header {
-    text-align: center;
-    padding: 60px 0;
-    border-top: 1px solid var(--border-glass);
-  }
-  
-  .services-header h2 {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    letter-spacing: 4px;
-    color: var(--text-white);
-    font-weight: 400;
-  }
-  
-  /* ==========================================================================
-     RESPONSIVE DESIGN (Mobile / Tablet)
-     ========================================================================== */
-  @media (max-width: 992px) {
-    .features-container,
-    .projects-container {
-      grid-template-columns: 1fr;
-    }
-    
-    .hero-title {
-      font-size: 2.8rem;
-    }
-    
-    .features-container {
-      margin-top: 40px;
-    }
-  }
+}
