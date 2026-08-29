@@ -149,6 +149,7 @@
     font-weight: 400;
     transition: color 0.3s ease, transform 0.2s ease;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+
   }
 
   .nav-links a:hover {
@@ -156,6 +157,12 @@
     transform: translateY(-2px);
   }
 
+.nav-links a.active {
+  color: beige;
+  border-bottom: 3px solid beige;
+  font-weight: 400;
+    
+  }
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .center-logo-img {
@@ -205,7 +212,7 @@
   }
   
   .card-icon {
-    color: var(--teal-emerald);
+    color: #E2C275;
     margin-bottom: 20px;
   }
   
@@ -228,7 +235,7 @@
   .card-link {
     font-size: 0.75rem;
     letter-spacing: 1.5px;
-    color: var(--text-muted);
+    color: #ab8c42;
     font-weight: 600;
   }
   
