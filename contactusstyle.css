@@ -1,3 +1,4 @@
+
 /* ==========================================================================
    BICQNÉ FONT DECLARATION (Local Font Import)
    ========================================================================== */
@@ -25,7 +26,7 @@
    ========================================================================== */
 :root {
   --bg-obsidian: #0d1114;
-  --bg-card: rgba(22, 28, 34, 0.65);
+  --bg-card: rgba(1, 93, 73, 0.5);
   --border-glass: rgba(255, 255, 255, 0.08);
 
   --text-white: #f9f8f6;
@@ -34,6 +35,10 @@
   --teal-emerald: #006b54;
   --teal-glow: rgba(0, 107, 84, 0.4);
   --crimson-red: #c8102e;
+  --gold: #E2C275;
+  --gold-glow: rgba(226, 194, 117, 0.35);
+  --bg-top: #002a1f;
+  --bg-bottom: #002217;
 
   --font-bicqne: 'Bicqne', 'Cinzel', Didot, serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -41,7 +46,8 @@
 
 *{ margin:0; padding:0; box-sizing:border-box; }
 body{
-  background: var(--bg-obsidian);
+  background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+  background-attachment: fixed;
   color: var(--text-white);
   font-family: var(--font-body);
   font-weight: 300;
@@ -55,7 +61,32 @@ a{ text-decoration:none; color:inherit; }
 .contact-section{
   max-width: 1100px;
   margin: 0 auto;
-  padding: 110px 6% 130px;
+  padding: 80px 6% 130px;
+}
+
+/* ---------- About ---------- */
+.about-section{
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 100px 6% 0;
+  text-align: center;
+}
+.about-section .about-label{
+  font-family: var(--font-bicqne);
+  font-size: 2.1rem;
+  letter-spacing: 1px;
+  color: var(--gold);
+  margin-bottom: 26px;
+}
+.about-section p{
+  font-size: .95rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+  font-weight: 300;
+}
+.about-section p b{
+  color: var(--text-white);
+  font-weight: 500;
 }
 
 .contact-eyebrow{
@@ -89,7 +120,7 @@ a{ text-decoration:none; color:inherit; }
   border:1px solid var(--border-glass);
   border-radius:16px;
   padding:34px 28px;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(16px);
   text-align:center;
   transition: transform .3s cubic-bezier(.25,.8,.25,1), border-color .3s ease, box-shadow .3s ease;
 }
@@ -111,7 +142,7 @@ a{ text-decoration:none; color:inherit; }
   font-weight:600;
 }
 .info-card h4 i{
-  color:var(--crimson-red);
+  color:var(--gold);
   font-size:.8rem;
   transition: transform .3s ease;
 }
@@ -143,7 +174,7 @@ a{ text-decoration:none; color:inherit; }
 .form-head .script{
   font-family: 'Alex Brush', cursive;
   font-size:3.2rem;
-  color: var(--text-white);
+  color: var(--gold);
   line-height:1;
   margin-bottom:6px;
 }
@@ -283,9 +314,9 @@ textarea{ min-height:110px; resize:vertical; }
 
 .submit-wrap{ text-align:center; }
 button.send{
-  background: var(--crimson-red);
-  border:1px solid var(--crimson-red);
-  color: var(--text-white);
+  background: var(--gold);
+  border:1px solid var(--gold);
+  color: var(--bg-obsidian);
   letter-spacing:2px;
   font-size:.75rem;
   font-weight:700;
@@ -295,7 +326,7 @@ button.send{
   cursor:pointer;
   transition: background .25s ease, transform .2s ease;
 }
-button.send:hover{ background:#9c0c24; transform: translateY(-2px); }
+button.send:hover{ background: var(--teal-emerald); color: var(--text-white); transform: translateY(-2px); }
 
 /* ---------- Connect / socials ---------- */
 .connect-wrap{
@@ -323,3 +354,44 @@ button.send:hover{ background:#9c0c24; transform: translateY(-2px); }
   color:var(--text-white);
   transform: translateY(-4px);
 }
+
+/* ==========================================================================
+   FOOTER — same as Projects page (socials + head office / schedules / phone / email)
+   ========================================================================== */
+footer{
+  max-width:1000px;
+  margin:0 auto;
+  padding:80px 6% 40px;
+}
+.f-info{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:40px;
+  padding:50px 0;
+  border-top:1px solid var(--border-glass);
+  border-bottom:1px solid var(--border-glass);
+}
+@media(max-width:760px){ .f-info{ grid-template-columns:repeat(2,1fr); } }
+
+.f-info-item .i-label{
+  display:flex; align-items:center; gap:9px;
+  font-size:.85rem; font-weight:500; color:var(--text-white);
+  margin-bottom:10px;
+}
+.f-info-item .i-label i{ color:var(--gold); font-size:.85rem; width:16px; text-align:center; }
+.f-info-item .i-body{ font-size:.82rem; color:var(--text-muted); line-height:1.8; padding-left:25px; }
+.f-info-item .i-body a{ color:var(--text-muted); }
+.f-info-item .i-body a:hover{ color:var(--teal-emerald); }
+
+.f-bottom{
+  padding-top:26px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.f-bottom .copyright{ font-size:.75rem; color:var(--text-muted); }
+.f-bottom .legal{ display:flex; gap:26px; }
+.f-bottom .legal a{ font-size:.75rem; color:var(--text-muted); }
+.f-bottom .legal a:hover{ color:var(--gold); }
