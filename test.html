@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./teststyle.css">
+  <title>Real Estate Hero - Modern Animated Entrance</title>
+  
+  
+
+  <section class="gallery-section">
+    <h2 class="main-title">LUXUEUX ET MODERNE</h2>
+  
+    <!-- Filter / Category Tabs -->
+    <div class="category-tabs">
+      <button class="tab-btn active" data-target="cuisine">CUISINE</button>
+      <button class="tab-btn" data-target="sejour">SÉJOUR</button>
+      <button class="tab-btn" data-target="suite">SUITE</button>
+      <button class="tab-btn" data-target="piscine">PISCINE</button>
+      <button class="tab-btn" data-target="salle-deau">SALLE D'EAU</button>
+    </div>
+  
+    <!-- Carousels Wrapper -->
+    <div class="carousels-container">
+      
+      <!-- CUISINE SECTION -->
+      <div class="carousel-content active" id="cuisine">
+        <button class="prev-btn" aria-label="Previous">&lsaquo;</button>
+        <div class="carousel-track">
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="cuisine1-poster.jpg">
+              <source src="./assets/vids/kitchen1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="cuisine2-poster.jpg">
+              <source src="./assets/vids/kitchen2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="cuisine3-poster.jpg">
+              <source src="./assets/vids/kitchen3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="cuisine4-poster.jpg">
+              <source src="./assets/vids/kitchen4.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button class="next-btn" aria-label="Next">&rsaquo;</button>
+      </div>
+  
+      <!-- SÉJOUR SECTION -->
+      <div class="carousel-content" id="sejour">
+        <button class="prev-btn" aria-label="Previous">&lsaquo;</button>
+        <div class="carousel-track">
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="sejour1-poster.jpg">
+              <source src="sejour1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="sejour2-poster.jpg">
+              <source src="sejour2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button class="next-btn" aria-label="Next">&rsaquo;</button>
+      </div>
+  
+      <!-- SUITE SECTION -->
+      <div class="carousel-content" id="suite">
+        <button class="prev-btn" aria-label="Previous">&lsaquo;</button>
+        <div class="carousel-track">
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="suite1-poster.jpg">
+              <source src="suite1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="suite2-poster.jpg">
+              <source src="suite2.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button class="next-btn" aria-label="Next">&rsaquo;</button>
+      </div>
+  
+    </div>
+  </section>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.tab-btn');
+  const carousels = document.querySelectorAll('.carousel-content');
+  let autoScrollTimer = null;
+
+  // 1. Tab Switching Functionality
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-target');
+
+      tabs.forEach(t => t.classList.remove('active'));
+      carousels.forEach(c => c.classList.remove('active'));
+
+      tab.classList.add('active');
+      const activeCarousel = document.getElementById(targetId);
+      if (activeCarousel) {
+        activeCarousel.classList.add('active');
+        restartAutoScroll();
+      }
+    });
+  });
+
+  // 2. Auto-Scroll logic for the currently active carousel
+  function startAutoScroll() {
+    stopAutoScroll();
+    autoScrollTimer = setInterval(() => {
+      const activeTrack = document.querySelector('.carousel-content.active .carousel-track');
+      if (!activeTrack) return;
+
+      const cardWidth = activeTrack.querySelector('.carousel-card').offsetWidth + 20;
+      
+      // If reached the end of scrollable area, loop back to start
+      if (activeTrack.scrollLeft + activeTrack.clientWidth >= activeTrack.scrollWidth - 10) {
+        activeTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        activeTrack.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+    }, 4000); // Scrolls every 4 seconds
+  }
+
+  function stopAutoScroll() {
+    if (autoScrollTimer) clearInterval(autoScrollTimer);
+  }
+
+  function restartAutoScroll() {
+    stopAutoScroll();
+    startAutoScroll();
+  }
+
+  // 3. Left/Right Button Controls
+  document.querySelectorAll('.carousel-content').forEach(container => {
+    const track = container.querySelector('.carousel-track');
+    const prev = container.querySelector('.prev-btn');
+    const next = container.querySelector('.next-btn');
+
+    prev?.addEventListener('click', () => {
+      const cardWidth = track.querySelector('.carousel-card').offsetWidth + 20;
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      restartAutoScroll();
+    });
+
+    next?.addEventListener('click', () => {
+      const cardWidth = track.querySelector('.carousel-card').offsetWidth + 20;
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      restartAutoScroll();
+    });
+
+    // Pause auto-play when user interacts directly with mouse hover
+    track.addEventListener('mouseenter', stopAutoScroll);
+    track.addEventListener('mouseleave', startAutoScroll);
+  });
+
+  // Start auto-scroll on page load
+  startAutoScroll();
+});
+  </script>
+
+</body>
+</html>
