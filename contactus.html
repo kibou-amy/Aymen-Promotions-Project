@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cinzel:wght@500;600&family=Alex+Brush&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="contactusstyle.css">
+</head>
+<body>
+
+<section class="contact-section">
+  <div class="contact-eyebrow">Get in touch with us</div>
+  <div class="contact-sub">If you have any questions, please don't hesitate to send us a message</div>
+
+  <div class="info-row">
+    <div class="info-card">
+      <h4><i class="fa-solid fa-phone"></i>Phone</h4>
+      <p><a href="tel:+21323318648">+213 23 31 86 48</a><br><a href="tel:+213560582959">+213 560 58 29 59</a></p>
+    </div>
+    <div class="info-card">
+      <h4><i class="fa-solid fa-location-dot"></i>Head Office</h4>
+      <p>64, National Route No. 1, Block No. 31,<br>Bir Mourad Raïs, Algiers 16000</p>
+    </div>
+    <div class="info-card">
+      <h4><i class="fa-solid fa-envelope"></i>Email</h4>
+      <p><a href="mailto:contact@aymenpromotion-dz.com">contact@aymenpromotion-dz.com</a></p>
+    </div>
+  </div>
+
+  <div class="form-wrap">
+    <div class="form-head">
+      <div class="script">N'hésitez Pas</div>
+      <div class="title">À NOUS <b>CONTACTER</b></div>
+    </div>
+
+    <form onsubmit="return false;">
+
+      <div class="f-row">
+        <div class="field">
+          <label class="f-label">Nom et Prénom* :</label>
+          <input type="text">
+        </div>
+        <div class="field">
+          <label class="f-label">Email* :</label>
+          <input type="email">
+        </div>
+      </div>
+
+      <div class="f-row">
+        <div class="field">
+          <label class="f-label">Téléphone* :</label>
+          <div class="phone-field">
+            <select>
+              <option>🇩🇿 +213</option>
+              <option>🇫🇷 +33</option>
+              <option>🇹🇳 +216</option>
+              <option>🇲🇦 +212</option>
+            </select>
+            <input type="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label class="f-label">Objet* :</label>
+          <input type="text">
+        </div>
+      </div>
+
+      <div class="f-row">
+        <div class="field" style="flex-basis:100%;">
+          <label class="f-label">Message* :</label>
+          <textarea></textarea>
+        </div>
+      </div>
+
+      <div class="f-row">
+        <div class="field select-wrap" style="flex-basis:100%;">
+          <label class="f-label">Type de demande * :</label>
+          <select>
+            <option>-- Choisir un type --</option>
+            <option>Information générale</option>
+            <option>Visite d'un bien</option>
+            <option>Réclamation</option>
+            <option>Recrutement</option>
+          </select>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+
+      <div class="f-row">
+        <div class="field" style="flex-basis:100%;">
+          <label class="f-label">Pièce jointe</label>
+          <div class="file-row">
+            <span class="filename" id="fileName">Aucun fichier sélectionné</span>
+            <label class="file-btn" for="attachment">Choisir un fichier</label>
+            <input type="file" id="attachment" onchange="document.getElementById('fileName').textContent = this.files[0] ? this.files[0].name : 'Aucun fichier sélectionné';">
+          </div>
+        </div>
+      </div>
+
+      <div class="consent-row">
+        <input type="checkbox" id="consent">
+        <label for="consent">Consentement : J'accepte que mes données soient utilisées pour le traitement de ma demande en conformité avec la loi 18-07 révisée et complétée par la loi 11-25.</label>
+      </div>
+
+      <div class="submit-wrap">
+        <button class="send" type="submit">Prendre Contact</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="connect-wrap">
+    <h5>Connect with us</h5>
+    <div class="socials">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
