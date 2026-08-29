@@ -124,7 +124,7 @@ button:focus-visible,
 /* ==========================================================================
    STICKY HEADER + FILTER TABS
    ========================================================================== */
-header {
+/*header {
   position: sticky;
   top: 0;
   z-index: 60;
@@ -136,7 +136,62 @@ header {
   background: rgba(13, 17, 20, 0.9);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border-glass);
-}
+}*/
+/* Hero Section Container */
+  .hero-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/imgs/flower\ hero.jpe');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+  }
+
+  /* Top Left Brand Logo */
+  .brand-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  /* Bottom Navigation Bar with Glassmorphic Overlay */
+  .nav-container {
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 4px;
+    padding: 12px 0;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #E2C275;
+    font-size: 2rem;
+    font-weight: 400;
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+
+  .nav-links a:hover {
+    color: #FFF;
+    transform: translateY(-2px);
+  }
 
 .logo {
   font-family: var(--font-heading);

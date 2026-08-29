@@ -4,34 +4,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aymen Promotion - Projects</title>
+<title>Aymen Promotion - Projets</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="projectstyle.css">
 </head>
 <body> 
+ <section class="hero-section">
+    <!-- Top-Left Header Logo -->
+    <div class="brand-header">
+      <!-- Replace with your actual Aymen Promotion full logo image -->
+      <img src="./assets/imgs/golden logo no back.png" alt="Aymen Promotion Logo" class="brand-logo-img">
+    </div>
 
-<header>
-  <div class="logo">AYMEN <span>PROMOTION</span></div>
-</header>
+    <!-- Bottom Navigation Bar -->
+    <nav class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#catalogue">Catalogue</a></li>
+        <li><a href="#a-propos">À Propos</a></li>
+      </ul>
+    </nav>
+  </section>
 
 <div class="filters">
-  <button class="filter-btn" onclick="scrollToSection('finished')">FINISHED</button>
-  <button class="filter-btn" onclick="scrollToSection('in-progress')">IN PROGRESS</button>
-  <button class="filter-btn" onclick="scrollToSection('localities')">LOCALITIES</button>
+  <button class="filter-btn" onclick="scrollToSection('finished')">FINIS</button>
+  <button class="filter-btn" onclick="scrollToSection('in-progress')">EN COURS</button>
+  <button class="filter-btn" onclick="scrollToSection('localities')">LOCALITÉS</button>
 </div>
 
 <!-- ============================== FINISHED ============================== -->
 <section id="finished" class="page-section">
-  <div class="section-heading">Finished Projects</div>
+  <div class="section-heading">Projet Finis</div>
   <div class="finished-grid">
 
     <div class="fin-card">
       <img src="imgs/selenite.webp" alt="Résidence Sélénite">
       <div class="fin-info">
         <div class="name">Sélénite</div>
-        <div class="locality"><i class="fa-solid fa-location-dot"></i> Birkhadem, Algiers</div>
+        <div class="locality"><i class="fa-solid fa-location-dot"></i> Birkhadem, Alger</div>
       </div>
     </div>
 
@@ -39,7 +53,7 @@
       <img src="imgs/pyrite.webp" alt="Résidence Pyrite">
       <div class="fin-info">
         <div class="name">Pyrite</div>
-        <div class="locality"><i class="fa-solid fa-location-dot"></i> Cheraga, Algiers</div>
+        <div class="locality"><i class="fa-solid fa-location-dot"></i> Cheraga, Alger</div>
       </div>
     </div>
 
@@ -47,7 +61,7 @@
       <img src="imgs/jet.webp" alt="Résidence Jet">
       <div class="fin-info">
         <div class="name">Jet</div>
-        <div class="locality"><i class="fa-solid fa-location-dot"></i> Draria, Algiers</div>
+        <div class="locality"><i class="fa-solid fa-location-dot"></i> Draria, Alger</div>
       </div>
     </div>
 
@@ -55,7 +69,7 @@
       <img src="imgs/beryl.webp" alt="Résidence Beryl">
       <div class="fin-info">
         <div class="name">Beryl</div>
-        <div class="locality"><i class="fa-solid fa-location-dot"></i> Dely Ibrahim, Algiers</div>
+        <div class="locality"><i class="fa-solid fa-location-dot"></i> Dely Ibrahim, Alger</div>
       </div>
     </div>
 
@@ -63,7 +77,7 @@
       <img src="imgs/les-cretes.webp" alt="Résidence les crests">
       <div class="fin-info">
         <div class="name">The Crests</div>
-        <div class="locality"><i class="fa-solid fa-location-dot"></i> Draria, Algiers</div>
+        <div class="locality"><i class="fa-solid fa-location-dot"></i> Draria, Alger</div>
       </div>
     </div>
 
@@ -71,7 +85,7 @@
       <img src="imgs/turquoise.webp" alt="Résidence Turquoise">
       <div class="fin-info">
         <div class="name">Turquoise</div>
-        <div class="locality"><i class="fa-solid fa-location-dot"></i> The Sources , Algiers</div>
+        <div class="locality"><i class="fa-solid fa-location-dot"></i> The Sources , Alger</div>
       </div>
     </div>
   </div>
@@ -79,7 +93,7 @@
 
 <!-- ============================== IN PROGRESS ============================== -->
 <section id="in-progress" class="page-section">
-  <div class="section-heading">In Progress</div>
+  <div class="section-heading">En Cours</div>
   <div class="progress-grid">
 
     <div class="progress-card">
@@ -87,75 +101,75 @@
       <div class="name">Althea</div>
       <div class="locality"><i class="fa-solid fa-location-dot"></i> Chevalley, Alger</div>
       <div class="render"><img src="imgs/althea.webp" alt="Résidence Althea"></div>
-      <div class="phase-badge"><i class="fa-solid fa-person-digging"></i> Earthworks Phase</div>
-      <a href="#" class="discover">Discover <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="phase-badge"><i class="fa-solid fa-person-digging"></i>Phase Terrassement</div>
+      <a href="#" class="discover">Decouvrir <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
     <div class="progress-card">
       <div class="eyebrow">Residence</div>
       <div class="name">Cyanite</div>
-      <div class="locality"><i class="fa-solid fa-location-dot"></i> Cheraga, Algiers</div>
+      <div class="locality"><i class="fa-solid fa-location-dot"></i> Cheraga, Alger</div>
       <div class="render"><img src="imgs/cyanite.webp" alt="Résidence Cyanite"></div>
       <div class="advancement">
-        <div class="advancement-top"><span class="label">Advancement</span><span class="pct">45%</span></div>
+        <div class="advancement-top"><span class="label">Avancement</span><span class="pct">45%</span></div>
         <div class="progress-track"><div class="progress-fill" style="width:45%"></div></div>
       </div>
-      <a href="#" class="discover">Discover <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#" class="discover">Decouvrir <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
     <div class="progress-card">
       <div class="eyebrow">Residence</div>
       <div class="name">Azurite</div>
-      <div class="locality"><i class="fa-solid fa-location-dot"></i> Kouba, Algiers</div>
+      <div class="locality"><i class="fa-solid fa-location-dot"></i> Kouba, Alger</div>
       <div class="render"><img src="imgs/azurite.webp" alt="Résidence Azurite"></div>
       <div class="advancement">
-        <div class="advancement-top"><span class="label">Advancement</span><span class="pct">45%</span></div>
+        <div class="advancement-top"><span class="label">Avancement</span><span class="pct">45%</span></div>
         <div class="progress-track"><div class="progress-fill" style="width:45%"></div></div>
       </div>
-      <a href="#" class="discover">Discover <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#" class="discover">Decouvrir <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
     <div class="progress-card">
       <div class="eyebrow">Residence</div>
       <div class="name">Agate</div>
-      <div class="locality"><i class="fa-solid fa-location-dot"></i> Oued Romane, Algiers</div>
+      <div class="locality"><i class="fa-solid fa-location-dot"></i> Oued Romane, Alger</div>
       <div class="render"><img src="imgs/agate.webp" alt="Résidence Agate"></div>
       <div class="advancement">
-        <div class="advancement-top"><span class="label">Advancement</span><span class="pct">88%</span></div>
+        <div class="advancement-top"><span class="label">Avancement</span><span class="pct">88%</span></div>
         <div class="progress-track"><div class="progress-fill" style="width:88%"></div></div>
       </div>
-      <a href="#" class="discover">Discover <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#" class="discover">Decouvrir <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
     <div class="progress-card">
       <div class="eyebrow">Residence</div>
       <div class="name">Ametrine</div>
-      <div class="locality"><i class="fa-solid fa-location-dot"></i> Said Hamdine, Algiers</div>
+      <div class="locality"><i class="fa-solid fa-location-dot"></i> Said Hamdine, Alger</div>
       <div class="render"><img src="imgs/ametrine.webp" alt="Résidence Ametrine"></div>
       <div class="advancement">
-        <div class="advancement-top"><span class="label">Advancement</span><span class="pct">87%</span></div>
+        <div class="advancement-top"><span class="label">Avancement</span><span class="pct">87%</span></div>
         <div class="progress-track"><div class="progress-fill" style="width:87%"></div></div>
       </div>
-      <a href="#" class="discover">Discover <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#" class="discover">Decouvrir <i class="fa-solid fa-arrow-right"></i></a>
     </div>
 
     <div class="progress-card">
       <div class="eyebrow">Residence</div>
       <div class="name">Carnelian</div>
-      <div class="locality"><i class="fa-solid fa-location-dot"></i> Hydra, Algiers</div>
+      <div class="locality"><i class="fa-solid fa-location-dot"></i> Hydra, Alger</div>
       <div class="render"><img src="imgs/cornaline.webp" alt="Résidence Carnelian"></div>
       <div class="advancement">
-        <div class="advancement-top"><span class="label">Advancement</span><span class="pct">98%</span></div>
+        <div class="advancement-top"><span class="label">Avancement</span><span class="pct">98%</span></div>
         <div class="progress-track"><div class="progress-fill" style="width:98%"></div></div>
       </div>
-      <a href="#" class="discover">Discover <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#" class="discover">Decouvrir <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
 
 <!-- ============================== LOCALITIES ============================== -->
  <section id="localities" class="page-section">
-  <div class="section-heading">Localities</div>
+  <div class="section-heading">Localites</div>
 
   <div class="map-wrap">
     <div class="map-svg-holder" id="mapHolder">
@@ -181,9 +195,9 @@
         <i class="fa-solid fa-location-dot"></i>
         <div class="pin-tooltip">
           <div class="t-name">Pyrite</div>
-          <div class="t-locality">cheraga, Algiers</div>
+          <div class="t-locality">cheraga, Alger</div>
           <div class="t-actions">
-            <a href="#finished" class="t-btn view">View</a>
+            <a href="#finished" class="t-btn view">Vue</a>
             <a href="https://www.google.com/maps?q=36.7667,2.95" target="_blank" class="t-btn gps"><i class="fa-solid fa-location-arrow"></i></a>
           </div>
         </div>
@@ -194,9 +208,9 @@
         <i class="fa-solid fa-location-dot"></i>
         <div class="pin-tooltip">
           <div class="t-name">Pyrite</div>
-          <div class="t-locality">Chéraga, Algiers</div>
+          <div class="t-locality">Chéraga, Alger</div>
           <div class="t-actions">
-            <a href="#finished" class="t-btn view">View</a>
+            <a href="#finished" class="t-btn view">Vue</a>
             <a href="" target="_blank" class="t-btn gps"><i class="fa-solid fa-location-arrow"></i></a>
           </div>
         </div>
@@ -207,9 +221,9 @@
         <i class="fa-solid fa-location-dot"></i>
         <div class="pin-tooltip">
           <div class="t-name">Azurite</div>
-          <div class="t-locality">Kouba, Algiers</div>
+          <div class="t-locality">Kouba, Alger</div>
           <div class="t-actions">
-            <a href="#in-progress" class="t-btn view">View</a>
+            <a href="#in-progress" class="t-btn view">Vue</a>
             <a href="https://www.google.com/maps?q=36.7256,3.0850" target="_blank" class="t-btn gps"><i class="fa-solid fa-location-arrow"></i></a>
           </div>
         </div>
@@ -222,7 +236,7 @@
           <div class="t-name">Althea</div>
           <div class="t-locality">Chevalley, Alger</div>
           <div class="t-actions">
-            <a href="#in-progress" class="t-btn view">View</a>
+            <a href="#in-progress" class="t-btn view">Vue</a>
             <a href="https://www.google.com/maps?q=36.7333,3.0167" target="_blank" class="t-btn gps"><i class="fa-solid fa-location-arrow"></i></a>
           </div>
         </div>
@@ -233,9 +247,9 @@
         <i class="fa-solid fa-location-dot"></i>
         <div class="pin-tooltip">
           <div class="t-name">Peridot</div>
-          <div class="t-locality">Hydra, Algiers</div>
+          <div class="t-locality">Hydra, Alger</div>
           <div class="t-actions">
-            <a href="#finished" class="t-btn view">View</a>
+            <a href="#finished" class="t-btn view">Vue</a>
             <a href="https://www.google.com/maps" target="_blank" class="t-btn gps"><i class="fa-solid fa-location-arrow"></i></a>
           </div>
         </div>
@@ -246,9 +260,9 @@
         <i class="fa-solid fa-location-dot"></i>
         <div class="pin-tooltip">
           <div class="t-name">Opal</div>
-          <div class="t-locality">El Achour, Algiers</div>
+          <div class="t-locality">El Achour, Alger</div>
           <div class="t-actions">
-            <a href="#finished" class="t-btn view">View</a>
+            <a href="#finished" class="t-btn view">Vue</a>
             <a href="https://www.google.com/maps" target="_blank" class="t-btn gps"><i class="fa-solid fa-location-arrow"></i></a>
           </div>
         </div>
@@ -259,9 +273,9 @@
         <i class="fa-solid fa-location-dot"></i>
         <div class="pin-tooltip">
           <div class="t-name">Jet</div>
-          <div class="t-locality">Draria , Algiers</div>
+          <div class="t-locality">Draria , Alger</div>
           <div class="t-actions">
-            <a href="#finished" class="t-btn view">View</a>
+            <a href="#finished" class="t-btn view">Vue</a>
             <a href="https://www.google.com/maps" target="_blank" class="t-btn gps"><i class="fa-solid fa-location-arrow"></i></a>
           </div>
         </div>
@@ -272,9 +286,9 @@
         <i class="fa-solid fa-location-dot"></i>
         <div class="pin-tooltip">
           <div class="t-name">Sélénite</div>
-          <div class="t-locality">Birkhadem, Algiers</div>
+          <div class="t-locality">Birkhadem, Alger</div>
           <div class="t-actions">
-            <a href="#finished" class="t-btn view">View</a>
+            <a href="#finished" class="t-btn view">Vue</a>
             <a href="https://www.google.com/maps?q=36.7167,3.0333" target="_blank" class="t-btn gps"><i class="fa-solid fa-location-arrow"></i></a>
           </div>
         </div>
@@ -285,9 +299,9 @@
         <i class="fa-solid fa-location-dot"></i>
         <div class="pin-tooltip">
           <div class="t-name">Azurite</div>
-          <div class="t-locality">Kouba, Algiers</div>
+          <div class="t-locality">Kouba, Alger</div>
           <div class="t-actions">
-            <a href="#finished" class="t-btn view">View</a>
+            <a href="#finished" class="t-btn view">Vue</a>
             <a href="https://www.google.com/maps" target="_blank" class="t-btn gps"><i class="fa-solid fa-location-arrow"></i></a>
           </div>
         </div>
@@ -298,9 +312,9 @@
         <i class="fa-solid fa-location-dot"></i>
         <div class="pin-tooltip">
           <div class="t-name">Celestine</div>
-          <div class="t-locality">Bab ezzouar, Algiers</div>
+          <div class="t-locality">Bab ezzouar, Alger</div>
           <div class="t-actions">
-            <a href="#finished" class="t-btn view">View</a>
+            <a href="#finished" class="t-btn view">Vue</a>
             <a href="https://www.google.com/maps" target="_blank" class="t-btn gps"><i class="fa-solid fa-location-arrow"></i></a>
           </div>
         </div>
@@ -311,9 +325,9 @@
         <i class="fa-solid fa-location-dot"></i>
         <div class="pin-tooltip">
           <div class="t-name">Angelite</div>
-          <div class="t-locality">Dar el Beida, Algiers</div>
+          <div class="t-locality">Dar el Beida, Alger</div>
           <div class="t-actions">
-            <a href="#finished" class="t-btn view">View</a>
+            <a href="#finished" class="t-btn view">Vue</a>
             <a href="https://www.google.com/maps" target="_blank" class="t-btn gps"><i class="fa-solid fa-location-arrow"></i></a>
           </div>
         </div>
@@ -322,7 +336,7 @@
     </div>
   </div>
 
-  <div class="map-note">Hover or tap a pin to preview a project — click "View" to jump to it, or the arrow icon for GPS directions.</div>
+  <div class="map-note">Survolez ou touchez une épingle pour prévisualiser un projet — cliquez sur « Afficher » pour y accéder, ou sur l’icône en forme de flèche pour les directions GPS.</div>
 </section>
 
 <div style="height:200px;"></div>
@@ -372,17 +386,17 @@ document.querySelectorAll('.pin').forEach(pin=>{
 
   <div class="f-info">
     <div class="f-info-item">
-      <div class="i-label"><i class="fa-solid fa-location-dot"></i>Head office</div>
+      <div class="i-label"><i class="fa-solid fa-location-dot"></i>Siège social</div>
       <div class="i-body">64, National Route No. 1, Block No. 31,<br>Bir Mourad Raïs, Algiers 16000</div>
     </div>
 
     <div class="f-info-item">
-      <div class="i-label"><i class="fa-regular fa-clock"></i>Schedules</div>
-      <div class="i-body">Saturday – Thursday<br>9:00 AM – 5:00 PM</div>
+      <div class="i-label"><i class="fa-regular fa-clock"></i>Horaires</div>
+      <div class="i-body">Samedi – Jeudi<br>9:00 AM – 5:00 PM</div>
     </div>
 
     <div class="f-info-item">
-      <div class="i-label"><i class="fa-solid fa-phone"></i>Phone</div>
+      <div class="i-label"><i class="fa-solid fa-phone"></i>Téléphone</div>
       <div class="i-body">+213 23 31 86 48<br>+213 560 58 29 59 <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i></div>
     </div>
 
@@ -393,7 +407,7 @@ document.querySelectorAll('.pin').forEach(pin=>{
   </div>
 
   <div class="f-bottom">
-    <div class="copyright">© Aymen Promotion 2026 — All rights reserved.</div>
+    <div class="copyright">© Aymen Promotion 2026 — Tous droits réservés.</div>
     <div class="legal">
       <a href="#">Terms &amp; Conditions</a>
       <a href="#">Privacy Policy</a>
