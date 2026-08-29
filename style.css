@@ -43,211 +43,138 @@
   /* ==========================================================================
      BASE & RESET STYLES
      ========================================================================== */
+
   * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: var(--bg-obsidian);
-    color: var(--text-white);
-    font-family: var(--font-body);
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-  }
-  
-  /* ==========================================================================
-     NAVIGATION BAR
-     ========================================================================== */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 8%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  
-  .logo {
-    width: 200px;
-    height: auto;
-    display: block;
   }
 
-  .logo img{
-    width: 200px;
-  }
-  
-  .logo-symbol {
-    width: 32px;
-    height: 32px;
-    border: 2px solid var(--teal-emerald);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--crimson-red);
-    font-weight: 700;
-  }
-  
-  .logo-text span {
-    color: var(--text-muted);
-    font-weight: 300;
-    font-size: 0.85rem;
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 35px;
-  }
-  
-  .nav-links a {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    font-weight: 400;
-  }
-  
-  .nav-links a:hover,
-  .nav-links a.active {
-    color: var(--text-white);
-  }
-  
-  /* ==========================================================================
-     HERO SECTION
-     ========================================================================== */
-  .hero {
-    position: relative;
-    height: 85vh;
-    min-height: 600px;
-    background: url("./assets/imgs/aymen\ hero5.jpe") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding: 0 8%;
-  }
-  
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+  body, html {
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      90deg, 
-      rgba(13, 17, 20, 0.95) 0%, 
-      rgba(13, 17, 20, 0.7) 45%, 
-      rgba(13, 17, 20, 0.2) 100%
-    );
+    font-family: 'Great Vibes', cursive;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #002a1f 0%, #002217 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   
-  .hero-content {
+  /* Hero Section Container */
+  .hero-section {
     position: relative;
-    z-index: 2;
-    max-width: 650px;
-    margin-top: 40px;
-  }
-  
-  .hero-title {
-    font-family: var(--font-bicqne);
-    font-size: 3.6rem;
-    font-weight: 400;
-    line-height: 1.15;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-  }
-  
-  .accent-text {
-    color: var(--teal-emerald);
-    font-weight: 700;
-    position: relative;
-  }
-  
-  .accent-text::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 40%;
-    height: 2px;
-    background-color: var(--crimson-red);
-  }
-  
-  .hero-subtitle {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    font-weight: 300;
-    margin-bottom: 35px;
-  }
-  
-  /* Buttons */
-  .hero-buttons {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/imgs/flower\ hero.jpe');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
   }
-  
-  .btn {
-    padding: 14px 32px;
-    font-size: 0.85rem;
-    font-weight: 500;
+
+  /* Top Left Brand Logo */
+  .brand-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .brand-logo-img {
+    height: 70px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Center Content (Main Emblem + Slogan) */
+  .hero-center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -20px;
+  }
+
+  .center-logo-img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3));
+  }
+
+  .slogan-text {
+    font-size: 2.2rem;
+    color: #E2C275; /* Gold tone matching the logo */
+    font-weight: 400;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+  }
+
+  /* Bottom Navigation Bar with Glassmorphic Overlay */
+  .nav-container {
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     border-radius: 4px;
-    cursor: pointer;
-    display: inline-block;
-    transition: all 0.3s ease;
+    padding: 12px 0;
+    margin-bottom: 10px;
   }
-  
-  .btn-primary {
-    background-color: var(--teal-emerald);
-    color: var(--text-white);
-    border: 1px solid var(--teal-emerald);
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
   }
-  
-  .btn-primary:hover {
-    background-color: #005240;
-    box-shadow: 0 0 15px var(--teal-glow);
+
+  .nav-links a {
+    text-decoration: none;
+    color: #E2C275;
+    font-size: 2rem;
+    font-weight: 400;
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   }
-  
-  .btn-secondary {
-    background-color: rgba(255, 255, 255, 0.03);
-    color: var(--text-white);
-    border: 1px solid var(--border-glass);
-    backdrop-filter: blur(10px);
+
+  .nav-links a:hover {
+    color: #FFF;
+    transform: translateY(-2px);
   }
-  
-  .btn-secondary:hover {
-    border-color: var(--text-white);
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .center-logo-img {
+      width: 150px;
+    }
+
+    .slogan-text {
+      font-size: 2.2rem;
+    }
+
+    .nav-links {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      font-size: 1.5rem;
+    }
   }
-  
-  .btn-gold-alternative {
-    background-color: var(--teal-emerald);
-    color: var(--text-white);
-    border: 1px solid var(--teal-emerald);
-    padding: 16px 40px;
-    letter-spacing: 2px;
-    font-family: var(--font-body);
-  }
-  
-  .btn-gold-alternative:hover {
-    border-color: var(--crimson-red);
-    box-shadow: 0 0 20px rgba(200, 16, 46, 0.3);
-  }
-  
+
   /* ==========================================================================
      FEATURES SECTION (Glass Cards)
      ========================================================================== */
@@ -273,7 +200,7 @@
   
   .glass-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(0, 107, 84, 0.5);
+    border-color: #E2C275;
   }
   
   .card-icon {
@@ -290,7 +217,7 @@
   }
   
   .glass-card p {
-    color: var(--text-muted);
+    color: #E2C275;
     font-size: 0.9rem;
     margin-bottom: 25px;
     font-weight: 300;
@@ -318,13 +245,11 @@
   }
   
   .main-title {
-    font-family: var(--font-bicqne);
     font-size: 2.2rem;
     letter-spacing: 3px;
     margin-bottom: 30px;
     font-weight: 400;
-    text-transform: uppercase;
-    color: var(--text-white);
+    color: #E2C275;
   }
   
   /* Category Filter Tabs */
@@ -352,14 +277,14 @@
   }
   
   .tab-btn:hover {
-    color: var(--text-white);
+    color: #E2C275;
     border-color: var(--teal-emerald);
   }
   
   .tab-btn.active {
-    background-color: var(--teal-emerald);
+    background-color: #E2C275;
     color: var(--text-white);
-    border-color: var(--teal-emerald);
+    border-color: #E2C275;
     box-shadow: 0 0 15px var(--teal-glow);
   }
   
