@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aymen Promotion - Projets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cinzel:wght@500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="projectstyle.css">
+  <!-- Google Fonts: Great Vibes for script typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+  <section class="hero-section">
+    <!-- Top-Left Header Logo -->
+    <div class="brand-header">
+      <!-- Replace with your actual Aymen Promotion full logo image -->
+      <img src="./assets/imgs/golden logo no back.png" alt="Aymen Promotion Logo" class="brand-logo-img">
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="nav-container">
+      <ul class="nav-links">
+        <li><a href="./index (1).html">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="./projectspage.html">Projets</a></li>
+        <li><a href="#catalogue" class="active">Catalogue</a></li>
+        <li><a href="#a-propos">Contactez-nous</a></li>
+      </ul>
+    </nav>
+  </section>
+
+
+  <!DOCTYPE html>
+  <html lang="fr">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+      :root {
+        --font-heading: 'Bicqne', 'Cinzel', Didot, serif;
+        --font-body: 'Plus Jakarta Sans', sans-serif;
+        --text-white: #f9f8f6;
+        --text-muted: #a0aab2;
+        --border-glass: rgba(255, 255, 255, 0.08);
+        --teal-emerald: #006b54;
+        --teal-emerald-bright: #00a37d;
+        --crimson-red: #c8102e;
+        --radius-lg: 16px;
+        --radius-md: 10px;
+      }
+
+
+      .catalogue-section {
+        width: 100%;
+        padding: 80px 6%;
+      }
+
+      .catalogue-heading {
+        text-align: center;
+        font-family: 'Great Vibes', cursive;
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        color: #E2C275;
+        margin-bottom: 50px;
+      }
+
+      .catalogue-wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 340px 1fr;
+        gap: 50px;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-lg);
+        padding: 40px;
+      }
+
+      /* Cover thumbnail — swap the background-image for your PDF's first-page render */
+      .catalogue-cover {
+        position: relative;
+        aspect-ratio: 3 / 4;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        border: 1px solid var(--border-glass);
+        background: linear-gradient(160deg, #0d1114 0%, #06231b 100%) center/cover;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      }
+
+
+
+      .catalogue-cover .pdf-tag {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--crimson-red);
+        color: var(--text-white);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 6px 12px;
+        border-radius: 4px;
+      }
+
+
+      .catalogue-info h3 {
+        font-family: var(--font-heading);
+        color: #E2C275;
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+
+      .catalogue-info p {
+        text-align: center;
+        font-size: 0.92rem;
+        line-height: 1.8;
+        color: var(--text-muted);
+        margin-bottom: 30px;
+        max-width: 420px;
+      }
+
+      .catalogue-actions {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+
+      /* Embedded viewer, shown when "Voir le catalogue" is opened */
+      .pdf-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+      }
+
+      .pdf-modal.open {
+        display: flex;
+      }
+
+      .pdf-modal-inner {
+        width: 100%;
+        max-width: 900px;
+        height: 90vh;
+        background: #0d1114;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        position: relative;
+        border: 1px solid var(--border-glass);
+      }
+
+      .pdf-modal-inner iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .pdf-modal-close {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--text-white);
+        color: #0d1114;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      @media (max-width: 720px) {
+        .catalogue-wrap {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .catalogue-cover {
+          max-width: 260px;
+          margin: 0 auto;
+        }
+
+        .catalogue-actions {
+          justify-content: center;
+        }
+
+        .catalogue-info p {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    </style>
+
+    <section class="catalogue-section">
+      <h2 class="catalogue-heading">Notre Catalogue</h2>
+
+      <div class="catalogue-wrap">
+
+        <div class="catalogue-info">
+          <h3>Catalogue des Résidences</h3>
+          <p>Découvrez l'ensemble de nos projets, finitions et prestations dans notre catalogue complet, disponible à la
+            consultation ou au téléchargement.</p>
+
+          <!-- Embedded PDF viewer -->
+          <div class="pdf-modal" id="pdfModal">
+            <div class="pdf-modal-inner">
+              <button class="pdf-modal-close"
+                onclick="document.getElementById('pdfModal').classList.remove('open')">&times;</button>
+              <iframe src="./assets/docs/catalogue.pdf" title="Catalogue Aymen Promotion"></iframe>
+            </div>
+            </div>
+       </div>
+    </section>
+
+    <script>
+      function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      const sections = document.querySelectorAll('.page-section');
+      const buttons = document.querySelectorAll('.filter-btn');
+      const order = ['finished', 'in-progress', 'localities'];
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const idx = order.indexOf(entry.target.id);
+            buttons.forEach(b => b.classList.remove('active'));
+            if (idx > -1) buttons[idx].classList.add('active');
+          }
+        });
+      }, { rootMargin: `-${76 + 74 + 20}px 0px -55% 0px` });
+
+      sections.forEach(s => observer.observe(s));
+
+      document.querySelectorAll('.pin').forEach(pin => {
+        pin.addEventListener('click', (e) => {
+          if (e.target.closest('.t-btn')) return;
+          document.querySelectorAll('.pin').forEach(p => { if (p !== pin) p.classList.remove('pin-open'); });
+          pin.classList.toggle('pin-open');
+        });
+      });
+    </script>
+
+    <style>
+      :root {
+        --font-heading: 'Bicqne', 'Cinzel', Didot, serif;
+        --font-body: 'Plus Jakarta Sans', sans-serif;
+        --text-white: #f9f8f6;
+        --text-muted: #a0aab2;
+      }
+
+
+
+      .stats-section {
+        width: 100%;
+        padding: 70px 6%;
+      }
+
+      .stats-grid {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-family: 'Great Vibes', cursive;
+        font-weight: 500;
+        font-size: 6.2rem;
+        line-height: 1;
+        color: var(--text-white);
+        white-space: nowrap;
+      }
+
+      /* "20 ans" is set as one logotype: the big "20" with a smaller
+     "ans" tucked against it, rather than two separate stacked lines */
+      .stat-number .suffix-word {
+        font-size: 0.42em;
+        margin-left: -0.12em;
+        vertical-align: 0.08em;
+      }
+
+      .stat-label {
+        margin-top: 18px;
+        font-family: var(--font-heading);
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+    </style>
+
+    <section class="stats-section">
+      <div class="stats-grid">
+
+        <div class="stat-item">
+          <div class="stat-number">20<span class="suffix-word">ans</span></div>
+          <div class="stat-label"><i>D'Expérience</i></div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">+30</div>
+          <div class="stat-label"><i>Résidences Haut<br> Standing</i></div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">+15</div>
+          <div class="stat-label"><i>Communes<br> Prestigieuses</i></div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-number">+1500</div>
+          <div class="stat-label"><i>Appartements<br> Livrés</i></div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+
+      <div class="f-social">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+
+      <div class="f-info">
+        <div class="f-info-item">
+          <div class="i-label"><i class="fa-solid fa-location-dot"></i>Siège social</div>
+          <div class="i-body">64, National Route No. 1, Block No. 31,<br>Bir Mourad Raïs, Algiers 16000</div>
+        </div>
+
+        <div class="f-info-item">
+          <div class="i-label"><i class="fa-regular fa-clock"></i>Horaires</div>
+          <div class="i-body">Samedi – Jeudi<br>9:00 AM – 5:00 PM</div>
+        </div>
+
+        <div class="f-info-item">
+          <div class="i-label"><i class="fa-solid fa-phone"></i>Téléphone</div>
+          <div class="i-body">+213 23 31 86 48<br>+213 560 58 29 59 <i class="fa-brands fa-whatsapp"
+              style="color:#25D366;"></i></div>
+        </div>
+
+        <div class="f-info-item">
+          <div class="i-label"><i class="fa-solid fa-envelope"></i>E-mail</div>
+          <div class="i-body"><a href="mailto:contact@aymenpromotion-dz.com">contact@aymenpromotion-dz.com</a></div>
+        </div>
+      </div>
+
+      <div class="f-bottom">
+        <div class="copyright">© Aymen Promotion 2026 — Tous droits réservés.</div>
+        <div class="legal">
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+
+    </footer>
+
+</body>
+
+</html>

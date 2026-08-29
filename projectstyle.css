@@ -80,11 +80,13 @@ html {
 }
 
 body {
-  background-color: var(--bg-obsidian);
-  color: var(--text-white);
+  margin: 0;
+  min-height: 100vh;
   font-family: var(--font-body);
-  line-height: 1.6;
-  overflow-x: hidden;
+  color: var(--text-white);
+  background: linear-gradient(180deg, #002a1f 0%, #002217 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 a {
@@ -140,12 +142,7 @@ button:focus-visible,
 /* Hero Section Container */
   .hero-section {
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('./assets/imgs/flower\ hero.jpe');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+ 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -159,6 +156,12 @@ button:focus-visible,
     display: flex;
     justify-content: flex-start;
     align-items: center;
+  }
+
+  .brand-logo-img {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
   }
   /* Bottom Navigation Bar with Glassmorphic Overlay */
   .nav-container {
@@ -180,6 +183,7 @@ button:focus-visible,
   }
 
   .nav-links a {
+    font-family:'Great Vibes', cursive;
     text-decoration: none;
     color: #E2C275;
     font-size: 2rem;
@@ -193,6 +197,23 @@ button:focus-visible,
     transform: translateY(-2px);
   }
 
+  .nav-links a.active {
+    color: beige;
+    border-bottom: 3px solid beige;
+    font-weight: 400;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .nav-links a {
+      font-size: 1.5rem;
+    }
+  }
+
 .logo {
   font-family: var(--font-heading);
   font-size: 1.1rem;
@@ -204,7 +225,6 @@ button:focus-visible,
 }
 
 .filters {
-  position: sticky;
   background:transparent;
   top: var(--header-h);
   z-index: 55;
@@ -221,7 +241,7 @@ button:focus-visible,
   border:none;
   background: transparent;
   color: var(--teal-emerald);
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -249,7 +269,7 @@ button:focus-visible,
 }
 
 .section-heading {
-  font-family: var(--font-heading);
+  font-family:'Great Vibes', cursive;
   font-size: 2rem;
   letter-spacing: 1px;
   text-align: center;

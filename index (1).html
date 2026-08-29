@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Aymen Promotion - Hero Section</title>
+  <!-- Google Fonts: Great Vibes for script typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  
+  
+</head>
+<body>
+
+  <section class="hero-section">
+    <!-- Top-Left Header Logo -->
+    <div class="brand-header">
+      <!-- Replace with your actual Aymen Promotion full logo image -->
+      <img src="./assets/imgs/golden logo no back.png" alt="Aymen Promotion Logo" class="brand-logo-img">
+    </div>
+
+    <!-- Main Center Graphic & Slogan -->
+    <div class="hero-center-content">
+      <img src="./assets/imgs/golden logo house no back.png" alt="Golden Icon" class="center-logo-img">
+      <h1 class="slogan-text">Frappez à La Bonne Porte</h1>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="nav-container">
+      <ul class="nav-links">
+        <li><a href="#accueil" class="active">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="./projectspage.html">Projets</a></li>
+        <li><a href="./catalogue.html">Catalogue</a></li>
+        <li><a href="#a-propos">Contactez-nous</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features-container">
+    
+    <div class="glass-card">
+      <div class="card-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 10v11M15 10v11M12 3L2 10h20L12 3z"/></svg>
+      </div>
+      <h3>Développement</h3>
+      <p>Transformez votre espace de vie avec notre service de décoration intérieure. </p>  
+      <a href="#" class="card-link">En savoir plus &rsaquo;</a>
+    </div>
+
+    <div class="glass-card">
+      <div class="card-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Vie inspirée par la nature</h3>
+      <p>Intégration transparente des maisons dans leur environnement naturel. </p>
+      <a href="#" class="card-link">En savoir plus &rsaquo;</a>
+    </div>
+
+    <div class="glass-card">
+      <div class="card-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <h3>Solutions personnalisées</h3>
+      <p>Personnalisation des conceptions en fonction de votre style et de vos préférences. </p>      
+      <a href="#" class="card-link">En savoir plus &rsaquo;</a>
+    </div>
+
+  </section>
+
+<!--SHOWCASE PROJECTS SECTION -->
+  
+  <section class="gallery-section">
+    <h2 class="main-title">Luxueux et Moderne</h2>
+  
+    <!-- Filter / Category Tabs -->
+    <div class="category-tabs">
+      <button class="tab-btn active" data-target="cuisine">cuisine</button>
+      <button class="tab-btn" data-target="sejour">SÉJOUR</button>
+      <button class="tab-btn" data-target="suite">SUITE</button>
+      <button class="tab-btn" data-target="pool">PISCINE</button>
+      <button class="tab-btn" data-target="bathroom">SALLE D'EAU</button>
+    </div>
+  
+    <!-- Carousels Wrapper -->
+    <div class="carousels-container">
+      
+      <!-- CUISINE SECTION -->
+      <div class="carousel-content active" id="cuisine">
+        <button class="prev-btn" aria-label="Previous">&lsaquo;</button>
+        <div class="carousel-track">
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="cuisine1-poster.jpg">
+              <source src="./assets/vids/kitchen1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="cuisine2-poster.jpg">
+              <source src="./assets/vids/kitchen2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="cuisine3-poster.jpg">
+              <source src="./assets/vids/kitchen3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="cuisine4-poster.jpg">
+              <source src="./assets/vids/kitchen4.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button class="next-btn" aria-label="Next">&rsaquo;</button>
+      </div>
+  
+      <!-- SÉJOUR SECTION -->
+      <div class="carousel-content" id="sejour">
+        <button class="prev-btn" aria-label="Previous">&lsaquo;</button>
+        <div class="carousel-track">
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="sejour1-poster.jpg">
+              <source src="./assets/vids/living1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="sejour2-poster.jpg">
+              <source src="./assets/vids/living2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="sejour1-poster.jpg">
+              <source src="./assets/vids/living3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="sejour1-poster.jpg">
+              <source src="./assets/vids/living4.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button class="next-btn" aria-label="Next">&rsaquo;</button>
+      </div>
+  
+      <!-- SUITE SECTION -->
+      <div class="carousel-content" id="suite">
+        <button class="prev-btn" aria-label="Previous">&lsaquo;</button>
+        <div class="carousel-track">
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="suite1-poster.jpg">
+              <source src="./assets/vids/suite1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="suite1-poster.jpg">
+              <source src="./assets/vids/suite2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="suite1-poster.jpg">
+              <source src="./assets/vids/suite3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="carousel-card">
+            <video autoplay loop muted playsinline poster="suite2-poster.jpg">
+              <source src="./assets/vids/suite4.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <button class="next-btn" aria-label="Next">&rsaquo;</button>
+      </div>
+    </div>
+
+    <!-- SWIMMING POOL SECTION -->
+    <div class="carousel-content" id="pool">
+      <button class="prev-btn" aria-label="Previous">&lsaquo;</button>
+      <div class="carousel-track">
+        <div class="carousel-card">
+          <video autoplay loop muted playsinline poster="suite1-poster.jpg">
+            <source src="./assets/vids/pool1.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="carousel-card">
+          <video autoplay loop muted playsinline poster="suite1-poster.jpg">
+            <source src="./assets/vids/pool2.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="carousel-card">
+          <video autoplay loop muted playsinline poster="suite1-poster.jpg">
+            <source src="./assets/vids/pool3.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="carousel-card">
+          <video autoplay loop muted playsinline poster="suite2-poster.jpg">
+            <source src="./assets/vids/pool4.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <button class="next-btn" aria-label="Next">&rsaquo;</button>
+    </div>
+
+  </div>
+
+  <!-- BATHROOM SECTION -->
+  <div class="carousel-content" id="bathroom">
+    <button class="prev-btn" aria-label="Previous">&lsaquo;</button>
+    <div class="carousel-track">
+      <div class="carousel-card">
+        <video autoplay loop muted playsinline poster="suite1-poster.jpg">
+          <source src="./assets/vids/bath1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="carousel-card">
+        <video autoplay loop muted playsinline poster="suite1-poster.jpg">
+          <source src="./assets/vids/bath2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="carousel-card">
+        <video autoplay loop muted playsinline poster="suite1-poster.jpg">
+          <source src="./assets/vids/bath3.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="carousel-card">
+        <video autoplay loop muted playsinline poster="suite2-poster.jpg">
+          <source src="./assets/vids/bath4.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <button class="next-btn" aria-label="Next">&rsaquo;</button>
+  </div>
+
+</div>
+  </section>
+
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const tabs = document.querySelectorAll('.tab-btn');
+  const carousels = document.querySelectorAll('.carousel-content');
+  let autoScrollTimer = null;
+
+  // 1. Tab Switching Functionality
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('data-target');
+
+      tabs.forEach(t => t.classList.remove('active'));
+      carousels.forEach(c => c.classList.remove('active'));
+
+      tab.classList.add('active');
+      const activeCarousel = document.getElementById(targetId);
+      if (activeCarousel) {
+        activeCarousel.classList.add('active');
+        restartAutoScroll();
+      }
+    });
+  });
+
+  // 2. Auto-Scroll logic for the currently active carousel
+  function startAutoScroll() {
+    stopAutoScroll();
+    autoScrollTimer = setInterval(() => {
+      const activeTrack = document.querySelector('.carousel-content.active .carousel-track');
+      if (!activeTrack) return;
+
+      const cardWidth = activeTrack.querySelector('.carousel-card').offsetWidth + 20;
+      
+      // If reached the end of scrollable area, loop back to start
+      if (activeTrack.scrollLeft + activeTrack.clientWidth >= activeTrack.scrollWidth - 10) {
+        activeTrack.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        activeTrack.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+    }, 4000); // Scrolls every 4 seconds
+  }
+
+  function stopAutoScroll() {
+    if (autoScrollTimer) clearInterval(autoScrollTimer);
+  }
+
+  function restartAutoScroll() {
+    stopAutoScroll();
+    startAutoScroll();
+  }
+
+  // 3. Left/Right Button Controls
+  document.querySelectorAll('.carousel-content').forEach(container => {
+    const track = container.querySelector('.carousel-track');
+    const prev = container.querySelector('.prev-btn');
+    const next = container.querySelector('.next-btn');
+
+    prev?.addEventListener('click', () => {
+      const cardWidth = track.querySelector('.carousel-card').offsetWidth + 20;
+      track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+      restartAutoScroll();
+    });
+
+    next?.addEventListener('click', () => {
+      const cardWidth = track.querySelector('.carousel-card').offsetWidth + 20;
+      track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      restartAutoScroll();
+    });
+
+    // Pause auto-play when user interacts directly with mouse hover
+    track.addEventListener('mouseenter', stopAutoScroll);
+    track.addEventListener('mouseleave', startAutoScroll);
+  });
+
+  // Start auto-scroll on page load
+  startAutoScroll();
+});
+  </script>
+
+
+<style>
+  :root {
+    --font-heading: 'Bicqne', 'Cinzel', Didot, serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --text-white: #f9f8f6;
+    --text-muted: #a0aab2;
+  }
+
+ 
+
+  .stats-section {
+    width: 100%;
+    padding: 70px 6%;
+  }
+
+  .stats-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 500;
+    font-size: 6.2rem;
+    line-height: 1;
+    color: var(--text-white);
+    white-space: nowrap;
+  }
+
+  /* "20 ans" is set as one logotype: the big "20" with a smaller
+     "ans" tucked against it, rather than two separate stacked lines */
+  .stat-number .suffix-word {
+    font-size: 0.42em;
+    margin-left: -0.12em;
+    vertical-align: 0.08em;
+  }
+
+  .stat-label {
+    margin-top: 18px;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  
+</style>
+
+  <section class="stats-section">
+    <div class="stats-grid">
+
+      <div class="stat-item">
+        <div class="stat-number">20<span class="suffix-word">ans</span></div>
+        <div class="stat-label"><i>D'Expérience</i></div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">+30</div>
+        <div class="stat-label"><i>Résidences Haut<br> Standing</i></div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">+15</div>
+        <div class="stat-label"><i>Communes<br> Prestigieuses</i></div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">+1500</div>
+        <div class="stat-label"><i>Appartements<br> Livrés</i></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+
+    <div class="f-social">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+
+    <div class="f-info">
+      <div class="f-info-item">
+        <div class="i-label"><i class="fa-solid fa-location-dot"></i>Siège social</div>
+        <div class="i-body">64, National Route No. 1, Block No. 31,<br>Bir Mourad Raïs, Algiers 16000</div>
+      </div>
+
+      <div class="f-info-item">
+        <div class="i-label"><i class="fa-regular fa-clock"></i>Horaires</div>
+        <div class="i-body">Samedi – Jeudi<br>9:00 AM – 5:00 PM</div>
+      </div>
+
+      <div class="f-info-item">
+        <div class="i-label"><i class="fa-solid fa-phone"></i>Téléphone</div>
+        <div class="i-body">+213 23 31 86 48<br>+213 560 58 29 59 <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i></div>
+      </div>
+
+      <div class="f-info-item">
+        <div class="i-label"><i class="fa-solid fa-envelope"></i>E-mail</div>
+        <div class="i-body"><a href="mailto:contact@aymenpromotion-dz.com">contact@aymenpromotion-dz.com</a></div>
+      </div>
+    </div>
+
+    <div class="f-bottom">
+      <div class="copyright">© Aymen Promotion 2026 — Tous droits réservés.</div>
+      <div class="legal">
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+</html>
