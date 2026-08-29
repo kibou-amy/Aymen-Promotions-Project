@@ -9,6 +9,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cinzel:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="projectstyle.css">
+ <!-- Google Fonts: Great Vibes for script typography -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body> 
  <section class="hero-section">
@@ -21,11 +27,11 @@
     <!-- Bottom Navigation Bar -->
     <nav class="nav-container">
       <ul class="nav-links">
-        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="./index (1).html">Accueil</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#catalogue">Catalogue</a></li>
-        <li><a href="#a-propos">À Propos</a></li>
+        <li><a href="./projectspage.html" class="active">Projets</a></li>
+        <li><a href="./catalogue.html">Catalogue</a></li>
+        <li><a href="#a-propos">Contactez-nous</a></li>
       </ul>
     </nav>
   </section>
@@ -339,7 +345,7 @@
   <div class="map-note">Survolez ou touchez une épingle pour prévisualiser un projet — cliquez sur « Afficher » pour y accéder, ou sur l’icône en forme de flèche pour les directions GPS.</div>
 </section>
 
-<div style="height:200px;"></div>
+
 
 <script>
 function scrollToSection(id){
@@ -371,7 +377,89 @@ document.querySelectorAll('.pin').forEach(pin=>{
 });
 </script>
 
-<div style="height:80px;"></div>
+<style>
+  :root {
+    --font-heading: 'Bicqne', 'Cinzel', Didot, serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --text-white: #f9f8f6;
+    --text-muted: #a0aab2;
+  }
+
+ 
+
+  .stats-section {
+    width: 100%;
+    padding: 70px 6%;
+  }
+
+  .stats-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 500;
+    font-size: 6.2rem;
+    line-height: 1;
+    color: var(--text-white);
+    white-space: nowrap;
+  }
+
+  /* "20 ans" is set as one logotype: the big "20" with a smaller
+     "ans" tucked against it, rather than two separate stacked lines */
+  .stat-number .suffix-word {
+    font-size: 0.42em;
+    margin-left: -0.12em;
+    vertical-align: 0.08em;
+  }
+
+  .stat-label {
+    margin-top: 18px;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  
+</style>
+
+  <section class="stats-section">
+    <div class="stats-grid">
+
+      <div class="stat-item">
+        <div class="stat-number">20<span class="suffix-word">ans</span></div>
+        <div class="stat-label"><i>D'Expérience</i></div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">+30</div>
+        <div class="stat-label"><i>Résidences Haut<br> Standing</i></div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">+15</div>
+        <div class="stat-label"><i>Communes<br> Prestigieuses</i></div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-number">+1500</div>
+        <div class="stat-label"><i>Appartements<br> Livrés</i></div>
+      </div>
+
+    </div>
+  </section>
 
 <footer>
 
