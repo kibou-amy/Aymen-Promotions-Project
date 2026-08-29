@@ -90,7 +90,7 @@
   }
 
   .brand-logo-img {
-    height: 70px;
+    height: 90px;
     width: auto;
     object-fit: contain;
   }
@@ -183,13 +183,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     padding: 0 8%;
-    margin-top: -80px;
+    margin-top: 60px;
     position: relative;
     z-index: 10;
   }
   
   .glass-card {
-    background: var(--bg-card);
+    background: #015d49a7;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--border-glass);
@@ -200,7 +200,7 @@
   
   .glass-card:hover {
     transform: translateY(-5px);
-    border-color: #E2C275;
+    border-color: rgba(0, 107, 84, 0.4);
   }
   
   .card-icon {
@@ -209,7 +209,7 @@
   }
   
   .glass-card h3 {
-    font-family: var(--font-bicqne);
+    color:#E2C275;
     font-size: 1.45rem;
     margin-bottom: 12px;
     font-weight: 400;
@@ -217,7 +217,8 @@
   }
   
   .glass-card p {
-    color: #E2C275;
+    font-family: var(--font-bicqne);
+    color: ;
     font-size: 0.9rem;
     margin-bottom: 25px;
     font-weight: 300;
@@ -278,7 +279,7 @@
   
   .tab-btn:hover {
     color: #E2C275;
-    border-color: var(--teal-emerald);
+    border-color: rgba(0, 107, 84, 0.4);
   }
   
   .tab-btn.active {
