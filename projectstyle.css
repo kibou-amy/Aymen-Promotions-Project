@@ -288,7 +288,7 @@ button:focus-visible,
 .fin-card {
   position: relative;
   aspect-ratio: 4 / 3;
-  border-radius: var(--radius-lg);
+  border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--border-glass);
   isolation: isolate;
@@ -378,7 +378,7 @@ button:focus-visible,
     radial-gradient(120% 140% at 100% 0%, var(--teal-glow) 0%, transparent 55%),
     var(--bg-card);
   border: 1px solid var(--border-glass);
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 32px 30px 30px;
   backdrop-filter: blur(6px);
   display:flex; flex-direction:column;
@@ -417,7 +417,7 @@ button:focus-visible,
 .progress-card .render {
   width: 100%;
   height: 190px;
-  border-radius: var(--radius-md);
+  border-radius: 4px;
   overflow: hidden;
   margin-bottom: 26px;
   border: 1px solid var(--border-glass);
@@ -518,7 +518,7 @@ button:focus-visible,
   padding: 40px;
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-xl);
+  border-radius: 4px;
 }
 
 .map-svg-holder {
@@ -681,7 +681,7 @@ footer {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-round);
+  border-radius: 4px;
   color: var(--text-muted);
   font-size: 0.85rem;
   transition: border-color var(--transition-base), color var(--transition-base);
