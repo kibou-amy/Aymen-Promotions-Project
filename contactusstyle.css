@@ -44,7 +44,11 @@
   --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
-*{ margin:0; padding:0; box-sizing:border-box; }
+*{ 
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 body{
   background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
   background-attachment: fixed;
@@ -118,7 +122,7 @@ a{ text-decoration:none; color:inherit; }
   position:relative;
   background: radial-gradient(120% 140% at 0% 0%, var(--teal-glow) 0%, transparent 55%), var(--bg-card);
   border:1px solid var(--border-glass);
-  border-radius:16px;
+  border-radius:4px;
   padding:34px 28px;
   backdrop-filter: blur(16px);
   text-align:center;
@@ -286,7 +290,7 @@ textarea{ min-height:110px; resize:vertical; }
   font-weight:700;
   text-transform:uppercase;
   padding:12px 24px;
-  border-radius:30px;
+  border-radius:4pxpx;
   cursor:pointer;
   white-space:nowrap;
   transition: background .25s ease, color .25s ease;
@@ -322,7 +326,7 @@ button.send{
   font-weight:700;
   text-transform:uppercase;
   padding:17px 48px;
-  border-radius:40px;
+  border-radius:4px;
   cursor:pointer;
   transition: background .25s ease, transform .2s ease;
 }
@@ -343,7 +347,7 @@ button.send:hover{ background: var(--teal-emerald); color: var(--text-white); tr
 .socials a{
   width:42px;height:42px;
   border:1px solid var(--border-glass);
-  border-radius:50%;
+  border-radius:5px;
   display:flex;align-items:center;justify-content:center;
   color:var(--text-muted);
   font-size:.85rem;
@@ -394,4 +398,116 @@ footer{
 .f-bottom .copyright{ font-size:.75rem; color:var(--text-muted); }
 .f-bottom .legal{ display:flex; gap:26px; }
 .f-bottom .legal a{ font-size:.75rem; color:var(--text-muted); }
-.f-bottom .legal a:hover{ color:var(--gold); }
+.f-bottom .legal a:hover{ color:var(--gold);
+}
+/* ==========================================================================
+   4. FOOTER — minimal (socials + head office / schedules / phone / email)
+   ========================================================================== */
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 6% 40px;
+}
+
+.f-social {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 64px;
+}
+
+.f-social a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-round);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: border-color var(--transition-base), color var(--transition-base);
+}
+
+.f-social a:hover {
+  border-color: var(--teal-emerald);
+  color: var(--text-white);
+}
+
+.f-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 50px 0;
+  border-top: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.f-info-item .i-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-white);
+  margin-bottom: 10px;
+}
+
+.f-info-item .i-label i {
+  width: 16px;
+  text-align: center;
+  color: var(--crimson-red);
+  font-size: 0.85rem;
+}
+
+.f-info-item .i-body {
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  padding-left: 25px;
+}
+
+.f-info-item .i-body a {
+  color: var(--text-muted);
+}
+
+.f-info-item .i-body a:hover {
+  color: var(--teal-emerald);
+}
+
+.f-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 26px;
+}
+
+.f-bottom .copyright {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+}
+
+.f-bottom .legal {
+  display: flex;
+  gap: 26px;
+}
+
+.f-bottom .legal a {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+}
+
+.f-bottom .legal a:hover {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 760px) {
+  .f-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

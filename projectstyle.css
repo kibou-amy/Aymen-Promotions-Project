@@ -52,7 +52,7 @@
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-xl: 20px;
-  --radius-round: 50%;
+  --radius-round: 4px;
 
   /* Motion */
   --ease: cubic-bezier(.25, .8, .25, 1);
